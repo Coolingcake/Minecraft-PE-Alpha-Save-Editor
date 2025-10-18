@@ -15,20 +15,16 @@ public class SaveEditor {
 
         try {
             // File path input
-            System.out.print("Enter file path: ");
+            System.out.print("Enter file path to level.dat: ");
             filePath = scanner.nextLine();
             
-
             // Read file
             data = Files.readAllBytes(Path.of(filePath));
             System.out.println("File loaded! Size: " + data.length + " bytes.");
 
             // Extract metadata
             nameLength = data[59];
-            System.out.println("World name length: " + nameLength);
-
             itemCount = data[385 + nameLength] - 9;
-            System.out.println("Item Count: " + itemCount);
 
             // Remove hotbar references
             removeHotbar();
@@ -64,6 +60,7 @@ public class SaveEditor {
 			"Boots"
 		};
 
+		// Display all armor slots and get their data
 		for (int i = 0; i < 4; i++) {
 			int itemOffset = startOffset + (i * 28);
 
@@ -89,6 +86,7 @@ public class SaveEditor {
         int startOffset = 716 + nameLength;
         System.out.println("\n--- INVENTORY ITEMS ---");
 
+		// Display all used inventory slots and get their data
         for (int i = 0; i < itemCount; i++) {
             int itemOffset = startOffset + (i * 36);
 
@@ -111,7 +109,6 @@ public class SaveEditor {
 
 	public static void editArmor(Scanner scanner) {
 		int startOffset = 109 + nameLength;
-
 		String[] name = {
 			"Helmet",
 			"Chestplate",
@@ -127,6 +124,7 @@ public class SaveEditor {
 			return;
 		}
 
+		// Get selected armor slots data
 		int itemOffset = startOffset + (index * 28);
 
 		byte oldCount = data[itemOffset + 5];
@@ -160,7 +158,7 @@ public class SaveEditor {
 		} catch (IOException e) {
 			System.out.println("Error saving file: " + e.getMessage());
 		}
-}
+	}
 
 	public static void editItem(Scanner scanner) {
         int startOffset = 716 + nameLength;
@@ -173,6 +171,7 @@ public class SaveEditor {
             return;
         }
 
+		// Get selected inventory slots data
         int itemOffset = startOffset + (index * 36);
 
         byte oldCount = data[itemOffset + 5];
@@ -227,10 +226,32 @@ public class SaveEditor {
 
             int insertPos = 716 + nameLength + (itemCount * 36);
 
+			int startOffset = 716 + nameLength;
+			boolean[] usedSlots = new boolean[36];
+
+			// Mark used slots
+			for (int i = 0; i < itemCount; i++) {
+				int itemOffset = startOffset + (i * 36);
+				int slotNum = (data[itemOffset + 24] & 0xFF) - 9; // convert back to 0–35
+				if (slotNum >= 0 && slotNum < 36) {
+					usedSlots[slotNum] = true;
+				}
+			}
+
+			// Find lowest available slot
+			int nextSlot = -1;
+			for (int i = 0; i < 36; i++) {
+				if (!usedSlots[i]) {
+					nextSlot = i;
+					break;
+				}
+			}
+			
+			// Insert the data with the required bytes around it
             byte[] insert = {
                     0x43, 0x6F, 0x75, 0x6E, 0x74, (byte) count, 0x02, 0x06, 0x00, //Count
                     0x44, 0x61, 0x6D, 0x61, 0x67, 0x65, (byte) dataValue, 0x00, 0x01, 0x04, 0x00, //Damage/Data
-                    0x53, 0x6C, 0x6F, 0x74, (byte) (itemCount + 9), 0x02, 0x02, 0x00, //Slot
+                    0x53, 0x6C, 0x6F, 0x74, (byte) (nextSlot + 9), 0x02, 0x02, 0x00, //Slot
                     0x69, 0x64, (byte) itemID, (byte) isItem, 0x00, 0x09, 0x06, 0x00 // ID
             };
 
@@ -240,6 +261,7 @@ public class SaveEditor {
             System.arraycopy(insert, 0, newData, insertPos, insert.length);
             System.arraycopy(data, insertPos, newData, insertPos + insert.length, data.length - insertPos);
 
+			// Change previous items data so it doesn't think that is the last one in the list
             newData[insertPos - 3] = 0x01;
             newData[insertPos - 2] = 0x05;
 
@@ -258,24 +280,13 @@ public class SaveEditor {
     // FILE STRUCTURE UPDATES
     // -----------------------------
 
-    public static void saveChecksum() {
-        int checksumCount = data.length - 8;
-        data[4] = (byte) (checksumCount & 0xFF);
-        data[5] = (byte) ((checksumCount >> 8) & 0xFF);
-        System.out.println("Checksum updated: " + checksumCount);
-    }
-
-    public static void saveInventoryCount() {
-        int inventoryCount = Math.max(9, itemCount + 9);
-        data[385 + nameLength] = (byte) (inventoryCount & 0xFF);
-        System.out.println("Inventory count updated: " + inventoryCount);
-    }
-
     public static void updateInventoryMetadata(byte[] newData) {
+		// Make sure the checksum at the top of the file is 8 bytes less than the length of the file
         int checksumCount = newData.length - 8;
         newData[4] = (byte) (checksumCount & 0xFF);
         newData[5] = (byte) ((checksumCount >> 8) & 0xFF);
 
+		// Update the count of how many items are in the inventory
         int inventoryCount = Math.max(9, itemCount + 9);
         newData[385 + nameLength] = (byte) (inventoryCount & 0xFF);
 
@@ -288,6 +299,7 @@ public class SaveEditor {
     // -----------------------------
 
     public static void removeHotbar() {
+		// This method is just here to prevent crashes and headaches
         int[] hotbarValues = {
                 407, 408, 443, 444, 479, 480, 515, 516,
                 551, 552, 587, 588, 623, 624, 659, 660,

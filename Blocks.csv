@@ -1,0 +1,180 @@
+Block ID,Data Value,Name,S or C?,Notes,Renewable
+1,0,Stone,Both,,TRUE
+2,0,Grass Block,Creative,,FALSE
+3,0,Dirt,Both,,TRUE
+4,0,Cobblestone,Both,,TRUE
+5,0,Oak Planks,Both,,TRUE
+5,1,Spruce Planks,Both,,TRUE
+5,2,Birch Planks,Both,,TRUE
+5,3,Jungle Planks,Creative,,FALSE
+6,0,Sapling,Both,Oak,TRUE
+6,1,Sapling,Both,Spruce,TRUE
+6,2,Sapling,Both,Birch,TRUE
+6,3,Sapling,Neither,"Jungle, Grows oak tree",FALSE
+7,0,Bedrock,Creative,,FALSE
+8,0,Flowing Water,Neither,,FALSE
+9,0,Water,Neither,,FALSE
+10,0,Flowing Lava,Neither,,FALSE
+11,0,Lava,Neither,,FALSE
+12,0,Sand,Both,,FALSE
+13,0,Gravel,Both,,FALSE
+14,0,Gold Ore,Both,,FALSE
+15,0,Iron Ore,Both,,FALSE
+16,0,Coal Ore,Both,,FALSE
+17,0,Oak Wood,Both,,TRUE
+17,1,Spruce Wood,Both,,TRUE
+17,2,Birch Wood,Both,,TRUE
+17,3,Jungle Wood,Creative,,FALSE
+18,0,Leaves,Both,Oak,TRUE
+18,1,Leaves,Both,Spruce,TRUE
+18,2,Leaves,Both,Birch,TRUE
+18,3,Leaves,Creative,Jungle,FALSE
+19,0,Sponge,Creative,,FALSE
+20,0,Glass,Both,,FALSE
+21,0,Lapis Lazuli Ore,Creative,,FALSE
+22,0,Lapis Lazuli Block,Both,,FALSE
+24,0,Sandstone,Both,,FALSE
+24,1,Sandstone,Both,Chiseled,FALSE
+24,2,Sandstone,Both,Cut,FALSE
+24,3,Sandstone,Neither,Smooth,FALSE
+24,4,Sandstone,Neither,Cracked?,FALSE
+24,5,Sandstone,Neither,Gray?,FALSE
+26,0,Bed,Neither,Bottom Half,FALSE
+27,0,Powered Rail,Both,,FALSE
+30,0,Cobweb,Creative,,FALSE
+31,0,Fern,Neither,"Short Grass texture, gray in hand",FALSE
+31,1,Short Grass,Both,,TRUE
+31,2,Fern,Both,,TRUE
+32,0,Dead Bush,Creative,,FALSE
+35,0,Wool,Both,White,TRUE
+35,1,Orange Wool,Both,,TRUE
+35,2,Magenta Wool,Both,,FALSE
+35,3,Blue Light Wool,Both,Light Blue,FALSE
+35,4,Yellow Wool,Both,,TRUE
+35,5,Lime Wool,Both,,TRUE
+35,6,Pink Wool,Both,,TRUE
+35,7,Gray Wool,Both,,TRUE
+35,8,Light Gray Wool,Both,,TRUE
+35,9,Cyan Wool,Both,,FALSE
+35,10,Purple Wool,Both,,FALSE
+35,11,Blue Wool,Both,,FALSE
+35,12,Brown Wool,Both,,TRUE
+35,13,Green Wool,Both,,TRUE
+35,14,Red Wool,Both,,TRUE
+35,15,Black Wool,Both,,TRUE
+37,0,Flower,Both,Dandelion,TRUE
+38,0,Rose,Both,Blue Rose,TRUE
+39,0,Mushroom,Both,Brown,TRUE
+40,0,Mushroom,Both,Red,TRUE
+41,0,Block of Gold,Both,,FALSE
+42,0,Block of Iron,Both,,FALSE
+43,0,Double Smooth Stone Slab,Neither,,FALSE
+44,0,Stone Slab,Both,,TRUE
+44,1,Sandstone Slab,Both,,FALSE
+44,2,Fake Wood Slab,Neither,,FALSE
+44,3,Cobblestone Slab,Both,,TRUE
+44,4,Bricks Slab,Both,,FALSE
+44,5,Stone Bricks Slab,Both,,TRUE
+44,6,Quartz Slab,Both,,FALSE
+44,7,Stone Slab,Neither,Smooth Stone,FALSE
+45,0,Bricks,Both,,FALSE
+46,0,TNT,Both,,FALSE
+47,0,Bookshelf,Both,,TRUE
+48,0,Moss Stone,Creative,,FALSE
+49,0,Obsidian,Both,,FALSE
+50,0,Torch,Both,,TRUE
+51,0,Fire,Neither,,FALSE
+53,0,Oak Stairs,Both,,TRUE
+54,0,Chest,Both,,TRUE
+56,0,Diamond Ore,Creative,,FALSE
+57,0,Block of Diamond,Both,,FALSE
+58,0,Crafting Table,Both,,TRUE
+59,0,Crops,Neither,,FALSE
+60,0,Farmland,Neither,,FALSE
+60,1,Farmland,Neither,Watered in inventory,FALSE
+61,0,Furnace,Both,,TRUE
+62,0,Lit Furnace,Neither,,FALSE
+63,0,Sign,Neither,Standing,FALSE
+64,0,Wooden Door,Neither,,FALSE
+65,0,Ladder,Both,,TRUE
+66,0,Rail,Both,,FALSE
+67,0,Stone Stairs,Both,,TRUE
+68,0,Sign,Neither,Wall,FALSE
+71,0,Iron Door,Neither,,FALSE
+73,0,Redstone Ore,Creative,,FALSE
+74,0,Lit Redstone Ore,Neither,,FALSE
+78,0,Snow,Creative,,FALSE
+79,0,Ice,Creative,,FALSE
+80,0,Snow Block,Both,,FALSE
+81,0,Cactus,Both,,TRUE
+82,0,Clay,Both,,TRUE
+83,0,Sugar Cane,Neither,,FALSE
+85,0,Fence,Both,,TRUE
+86,0,Pumpkin,Both,,TRUE
+87,0,Netherrack,Both,,FALSE
+89,0,Glowstone,Both,,FALSE
+91,0,Jack 'o' Lantern,Both,,TRUE
+92,0,Cake,Neither,,FALSE
+92,1,Cake,Neither,Slice gone in inventory,FALSE
+95,0,Invisible Bedrock,Neither,,FALSE
+96,0,Trapdoor,Both,,TRUE
+98,0,Stone Bricks,Both,,TRUE
+98,1,Stone Bricks,Creative,Mossy,FALSE
+98,2,Stone Bricks,Creative,Cracked,FALSE
+98,3,Stone Bricks,Neither,Chiseled,FALSE
+98,4,Stone Bricks,Neither,Gray,FALSE
+101,0,Iron Bars,Both,,FALSE
+102,0,Glass Pane,Both,,FALSE
+103,0,Melon,Both,,TRUE
+104,0,Pumpkin Stem,Neither,,FALSE
+105,0,Melon Stem,Neither,,FALSE
+107,0,Oak Fence Gate,Both,,TRUE
+108,0,Brick Stairs,Both,,FALSE
+109,0,Stone Brick Stairs,Both,,TRUE
+112,0,Nether Bricks,Both,,FALSE
+114,0,Nether Brick Stairs,Both,,FALSE
+126,0,Cake,Neither,Cake again,FALSE
+128,0,Sand Stone Stairs,Both,,FALSE
+134,0,Spruce Stairs,Both,,TRUE
+135,0,Birch Stairs,Both,,TRUE
+136,0,Jungle Stairs,Creative,,FALSE
+139,0,Cobblestone Wall,Both,,TRUE
+141,0,Carrots,Neither,,FALSE
+142,0,Potatoes,Neither,,FALSE
+155,0,Block of Quartz,Both,,FALSE
+155,1,Chiseled Block of Quartz,Both,,FALSE
+155,2,Pillar Quartz Block,Both,,FALSE
+156,0,Quartz Stairs,Creative,,FALSE
+157,0,Double Oak Slab,Neither,,FALSE
+158,0,Oak Wooden Slab,Both,,TRUE
+158,1,Spruce Wooden Slab,Both,,TRUE
+158,2,Birch Wooden Slab,Both,,TRUE
+158,3,Jungle Wooden Slab,Creative,,FALSE
+158,4,Wooden Slab,Neither,Crashes game when selected,FALSE
+170,0,Hay Bale,Both,,TRUE
+171,0,Carpet,Creative,White,FALSE
+171,1,Carpet,Creative,Orange,FALSE
+171,2,Carpet,Creative,Magenta,FALSE
+171,3,Carpet,Creative,Light Blue,FALSE
+171,4,Carpet,Creative,Yellow,FALSE
+171,5,Carpet,Creative,Lime,FALSE
+171,6,Carpet,Creative,Pink,FALSE
+171,7,Carpet,Creative,Gray,FALSE
+171,8,Carpet,Creative,Light Gray,FALSE
+171,9,Carpet,Creative,Cyan,FALSE
+171,10,Carpet,Creative,Purple,FALSE
+171,11,Carpet,Creative,Blue,FALSE
+171,12,Carpet,Creative,Brown,FALSE
+171,13,Carpet,Creative,Green,FALSE
+171,14,Carpet,Both,Red,TRUE
+171,15,Carpet,Creative,Black,FALSE
+173,0,Block of Coal,Both,,FALSE
+244,0,Beetroots,Neither,,FALSE
+245,0,Stonecutter,Both,,TRUE
+246,0,Glowing Obsidian,Neither,,FALSE
+247,0,Nether Reactor Core,Both,,FALSE
+247,1,Nether Reactor Core,Neither,Initialized in inventory,FALSE
+247,2,Nether Reactor Core,Neither,Finished in inventory,FALSE
+248,0,Info Update,Neither,,FALSE
+249,0,Info Update2,Neither,,FALSE
+255,0,Reserved6,Neither,,FALSE

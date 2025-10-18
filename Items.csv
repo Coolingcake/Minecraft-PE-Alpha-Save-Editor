@@ -1,0 +1,132 @@
+Block ID,Data Value,Name,S or C?,Notes,Renewable
+0,0,Iron Shovel,Survival,,FALSE
+1,0,Iron Pickaxe,Survival,,FALSE
+2,0,Iron Axe,Survival,,FALSE
+3,0,Flint and Steel,Both,,FALSE
+4,0,Apple,Both,,TRUE
+5,0,Bow,Both,,TRUE
+6,0,Arrow,Survival,,TRUE
+7,0,Coal,Survival,,FALSE
+7,1,Charcoal,Survival,,TRUE
+8,0,Diamond,Survival,,FALSE
+9,0,Iron Ingot,Survival,,FALSE
+10,0,Gold Ingot,Survival,,FALSE
+11,0,Iron Sword,Both,,FALSE
+12,0,Wooden Sword,Survival,,TRUE
+13,0,Wooden Shovel,Survival,,TRUE
+14,0,Wooden Pickaxe,Survival,,TRUE
+15,0,Wooden Axe,Survival,,TRUE
+16,0,Stone Sword,Survival,,TRUE
+17,0,Stone Shovel,Survival,,TRUE
+18,0,Stone Pickaxe,Survival,,TRUE
+19,0,Stone Axe,Survival,,TRUE
+20,0,Diamond Sword,Survival,,FALSE
+21,0,Diamond Shovel,Survival,,FALSE
+22,0,Diamond Pickaxe,Survival,,FALSE
+23,0,Diamond Axe,Survival,,FALSE
+24,0,Stick,Survival,,TRUE
+25,0,Bowl,Survival,,TRUE
+26,0,Mushroom Stew,Survival,,TRUE
+27,0,Golden Sword,Survival,,FALSE
+28,0,Golden Shovel,Survival,,FALSE
+29,0,Golden Pickaxe,Survival,,FALSE
+30,0,Golden Axe,Survival,,FALSE
+31,0,String,Survival,,TRUE
+32,0,Feather,Survival,,TRUE
+33,0,Gunpowder,Survival,,TRUE
+34,0,Wooden Hoe,Survival,,TRUE
+35,0,Stone Hoe,Survival,,TRUE
+36,0,Iron Hoe,Both,,FALSE
+37,0,Diamond Hoe,Survival,,FALSE
+38,0,Golden Hoe,Survival,,FALSE
+39,0,Seeds,Both,,TRUE
+40,0,Wheat,Both,,TRUE
+41,0,Bread,Survival,,TRUE
+42,0,Leather Cap,Survival,,TRUE
+43,0,Leather Tunic,Survival,,TRUE
+44,0,Leather Pants,Survival,,TRUE
+45,0,Leather Boots,Survival,,TRUE
+46,0,Chain Helmet,Survival,,FALSE
+47,0,Chain Chestplate,Survival,,FALSE
+48,0,Chain Leggings,Survival,,FALSE
+49,0,Chain Boots,Survival,,FALSE
+50,0,Iron Helmet,Survival,,FALSE
+51,0,Iron Chestplate,Survival,,FALSE
+52,0,Iron Leggings,Survival,,FALSE
+53,0,Iron Boots,Survival,,FALSE
+54,0,Diamond Helmet,Survival,,FALSE
+55,0,Diamond Chestplate,Survival,,FALSE
+56,0,Diamond Leggings,Survival,,FALSE
+57,0,Diamond Boots,Survival,,FALSE
+58,0,Golden Helmet,Survival,,FALSE
+59,0,Golden Chestplate,Survival,,FALSE
+60,0,Golden Leggings,Survival,,FALSE
+61,0,Golden Boots,Survival,,FALSE
+62,0,Flint,Survival,,FALSE
+63,0,Raw Porkchop,Survival,,TRUE
+64,0,Cooked Porkchop,Survival,,TRUE
+65,0,Painting,Both,,TRUE
+67,0,Oak Sign,Both,,TRUE
+68,0,Oak Door,Both,,TRUE
+69,0,Bucket,Both,,FALSE
+69,1,Bucket,Survival,Milk,FALSE
+69,8,Water Bucket,Both,,FALSE
+69,10,Lava Bucket,Both,,FALSE
+69,#,Bucket,Neither,Replace with whatever block id you want in the bucket,FALSE
+72,0,Minecart,Both,,FALSE
+73,0,Saddle,Neither,,FALSE
+74,0,Iron Door,Neither,,FALSE
+75,0,Redstone Dust,Survival,,FALSE
+76,0,Snowball,Survival,,FALSE
+78,0,Leather,Survival,,TRUE
+80,0,Brick,Survival,,FALSE
+81,0,Clay,Survival,,FALSE
+82,0,Sugar Canes,Both,,TRUE
+83,0,Paper,Survival,,TRUE
+84,0,Book,Survival,,TRUE
+85,0,Slimeball,Neither,,FALSE
+88,0,Egg,Both,,TRUE
+89,0,Compass,Both,,TRUE
+91,0,Clock,Both,,FALSE
+92,0,Glowstone Dust,Survival,,FALSE
+95,0,Ink Sac,Creative,,FALSE
+95,1,Rose Red,Both,,TRUE
+95,2,Cactus Green,Both,,TRUE
+95,3,Cocoa Beans,Creative,,FALSE
+95,4,Lapis Lazuli,Both,,FALSE
+95,5,Purple Dye,Both,,FALSE
+95,6,Cyan Dye,Both,,FALSE
+95,7,Light Gray Dye,Creative,,FALSE
+95,8,Gray Dye,Creative,,FALSE
+95,9,Pink Dye,Both,,TRUE
+95,10,Lime Dye,Both,,TRUE
+95,11,Dandelion Yellow,Both,,TRUE
+95,12,Light Blue Dye,Both,,FALSE
+95,13,Magenta Dye,Both,,FALSE
+95,14,Orange Dye,Both,,TRUE
+95,15,Bone Meal,Both,,TRUE
+96,0,Bone,Survival,,TRUE
+97,0,Sugar,Survival,,TRUE
+98,0,Cake,Both,,TRUE
+99,0,Bed,Both,,TRUE
+103,0,Shears,Both,,FALSE
+104,0,Melon,Survival,,TRUE
+105,0,Pumpkin Seeds,Both,,TRUE
+106,0,Melon Seeds,Both,,TRUE
+107,0,Raw Beef,Survival,,TRUE
+108,0,Cooked Beef,Survival,,TRUE
+109,0,Raw Chicken,Survival,,TRUE
+110,0,Cooked Chicken,Survival,,TRUE
+127,10,Spawn Chicken,Creative,,FALSE
+127,11,Spawn Cow,Creative,,FALSE
+127,12,Spawn Pig,Creative,,FALSE
+127,13,Spawn Sheep,Creative,,FALSE
+135,0,Carrot,Both,,TRUE
+136,0,Potato,Both,,TRUE
+137,0,Baked Potato,Survival,,TRUE
+144,0,Pumpkin Pie,Survival,,TRUE
+149,0,Nether Brick,Survival,,FALSE
+150,0,Nether Quartz,Survival,,FALSE
+201,0,Beetroot,Survival,,TRUE
+202,0,Beetroot Seeds,Both,,TRUE
+203,0,Beetroot Soup,Survival,,TRUE

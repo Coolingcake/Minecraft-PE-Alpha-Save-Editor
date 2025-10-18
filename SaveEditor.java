@@ -25,8 +25,7 @@ public class SaveEditor {
             
             // File path input
             System.out.print("Enter file path to level.dat: ");
-            // filePath = scanner.nextLine();
-            filePath = "C:\\NinecraftVersions\\Ninecraft081\\storage\\games\\com.mojang\\minecraftWorlds\\doghouse\\level.dat";
+            filePath = scanner.nextLine();
 
             // Read file
             data = Files.readAllBytes(Path.of(filePath));
@@ -463,3 +462,4 @@ public class SaveEditor {
         }
     }
 }
+

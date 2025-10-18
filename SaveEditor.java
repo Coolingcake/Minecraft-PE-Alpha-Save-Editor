@@ -11,7 +11,6 @@ public class SaveEditor {
     public static int nameLength;
     public static String filePath;
     
-    // Maps to store ID+DataValue -> Name mappings
     public static Map<String, String> blockNames = new HashMap<>();
     public static Map<String, String> itemNames = new HashMap<>();
 
@@ -44,7 +43,18 @@ public class SaveEditor {
                 displayInventory(scanner);
             }
             if (itemCount < 36) {
-                addItem(scanner);
+				System.out.print("Do you want to add an item? (y/n): ");
+				if (scanner.next().equalsIgnoreCase("y")) {
+					addItem(scanner);
+					while (true) {
+						System.out.println("Do you want to add another item? (y/n): ");
+						if (scanner.next().equalsIgnoreCase("y")) {
+							addItem(scanner);
+						} else {
+							break;
+						}
+					}
+				}
             }
 
         } catch (IOException e) {
@@ -93,6 +103,14 @@ public class SaveEditor {
         System.out.print("Do you want to edit your armor? (y/n): ");
         if (scanner.next().equalsIgnoreCase("y")) {
             editArmor(scanner);
+			while (true) {
+				System.out.println("Do you want to edit another piece of armor? (y/n): ");
+				if (scanner.next().equalsIgnoreCase("y")) {
+					editArmor(scanner);
+				} else {
+					return;
+				}
+			}
         }
     }
 
@@ -124,6 +142,14 @@ public class SaveEditor {
         System.out.print("Do you want to edit an item? (y/n): ");
         if (scanner.next().equalsIgnoreCase("y")) {
             editItem(scanner);
+			while (true) {
+				System.out.println("Do you want to edit another item? (y/n): ");
+				if (scanner.next().equalsIgnoreCase("y")) {
+					editItem(scanner);
+				} else {
+					return;
+				}
+			}
         }
     }
 
@@ -255,13 +281,7 @@ public class SaveEditor {
         }
     }
 
-    // ... rest of your methods (addItem, updateInventoryMetadata, removeHotbar) remain the same ...
-
     public static void addItem(Scanner scanner) {
-        System.out.print("Do you want to add an item? (y/n): ");
-        if (scanner.next().equalsIgnoreCase("n")) {
-            return;
-        }
         try {
             System.out.print("Are you adding a block or an item? (0 = Block, 1 = Item): ");
             int isItem = scanner.nextInt();
@@ -462,4 +482,3 @@ public class SaveEditor {
         }
     }
 }
-
